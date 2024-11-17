@@ -15,8 +15,14 @@ p, h1, h2, h3{
     margin: 0px;
 }
 
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
 p{
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
 }
 
@@ -31,19 +37,49 @@ a{
     justify-content: center;
 }
 
+.descricao h1{
+    font-size: 2rem;
+}
+
+.header{
+    display: grid;
+    justify-items: center;
+    gap: 60px;
+}
+
+.descricao::before{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #e21;
+    position: absolute;
+    right: -30px;
+    top: 30px;
+}
+
+.menu a:hover{
+    border: red solid;
+}
+
 .menu a {
     background-color: #fff;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     color: black;
     border-radius: 4px;
     text-transform: uppercase;
+    display: block;
+    border: #fff solid;
 }
 
+.VerMais:hover{
+    background: #ae0000;
+}   
 
 .VerMais{
     background: #e21;
     color: #fff;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border-radius: 4px;
     text-transform: uppercase;
 }
@@ -71,19 +107,27 @@ img{
     padding: 20px;
 }
 
+.item:hover{
+    border-left: #e21 solid;
+}
+
 .item p {
     grid-column: 2;
 }
 
+.items .item:nth-child(odd) {
+background-color: #f7f7f7;
+}
+
 .descricao{
-    background-color: white;
+    background: #fff;
     padding: 40px;
     text-align: right;
     position: relative;
     display: grid;
-    align-content: center;
-    justify-content: end;
     gap: 20px;
+    align-content: center;
+    justify-items: end;
 }
 
 .footer{
@@ -94,19 +138,11 @@ img{
     box-sizing: border-box;
 }
 
-.detalhe{
-    background-color: red;
-    width: 60px;
-    height: 4px;
-    position: absolute;
-    top: 30px;
-    right: -30px;
-}
-
 .subtitulo{
-    font-size: 64px;
+    font-size: 4rem;
     color: #00000034;
     text-align: right;
     padding: 40px;
     align-self: center;
+    background-image: url("./img/onda.svg");
 }
